@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Настройте политику безопасности содержимого в метатеге ниже. Добавьте "unsafe-inline" к default-src, чтобы включить встроенный код JavaScript.
+        Дополнительные сведения см. по ссылке http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyBFYTDI_36YLdfgadX1NrePYwItWuR8Lvc"></script>
+    <title>ОАТ-ТАКСИ</title>
+</head>
+    <body>
+        <div style="width:100%;background-color:white;height:20px;"><img width="5%" src="images/curtain-button.png" alt="Menu" /></div>
+        <div id="map"></div>
+        <div id="order-taxi">
+            <table>
+                <tr>
+                    <td><input id="start" name="start" type="textbox" value="Откуда" /></td>
+                    <td>Подъезд:<input id="entrance" name="entrance" type="number" value="1" min="1" max="6"></td>
+                </tr>
+                <tr>
+                    <td><input id="end" name="end" type="textbox" value="Куда"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="child" value="true" />Детское кресло<br/>
+                        <input type="checkbox" name="animal" value="true" />Перевозка животного
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="eco">Эконом от 45 рублей</label>
+                        <input type="radio" name="tariff" value="eco" id="eco" />
+                    </td>
+                    <td>
+                        <label for="com">Комфорт от 56 рублей</label>
+                        <input type="radio" name="tariff" value="com" id="com" />
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <script type="text/javascript" src="scripts/map-controller.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </body>
+</html>
